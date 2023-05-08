@@ -58,6 +58,10 @@ body{
     grid-row: 5 / span 2;
 }
 
+.c10{
+    grid-column: 2 / span 2;
+}
+
 .c11{
     grid-column: 2/4;
     background-color: lightgoldenrodyellow;
