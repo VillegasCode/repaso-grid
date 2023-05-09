@@ -8,8 +8,17 @@ body{
     height: 500px;
     /* Le decimos a nuestro navegador que habilite la función de GRID */
     display: grid;
+
+    grid-template-areas: 'cabecera cabecera'
+                        'menu menu'
+                        'contenido barralateral'
+                        'pie pie';
+
+    grid-template-rows: 20% 10% auto 10%;                 
+    /* 
+    En vez de usar esto también se puede usar grid-template-areas
     grid-template-columns: 80% auto;
-    grid-template-rows: 10% 10% 70% 10% auto;
+    grid-template-rows: 10% 10% 70% 10% auto; */
 
     justify-content: stretch;
     
@@ -35,26 +44,31 @@ body{
 }
 
 .cabecera{
-    grid-column: 1/3;
+    grid-area: cabecera;
+    /* grid-column: 1/3; */
     background-color: cadetblue;
 }
 
 .menu{
-    grid-column: 1/3;
+    grid-area: menu;
+    /* grid-column: 1/3; */
     background-color: aliceblue;
 }
 
 .barralateral{
+    grid-area: barralateral;
     background-color: brown;
 }
 
 .contenido{
+    grid-area: contenido;
     background-color: beige;
 }
 
 .pie{
+    grid-area: pie;
     background-color: cornflowerblue;
-    grid-column: 1/3;
+    /* grid-column: 1/3; */
 }
 
 .c1{
